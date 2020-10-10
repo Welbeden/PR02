@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.IO;
 
 namespace FileDemo
@@ -7,11 +8,11 @@ namespace FileDemo
     {
         static void Main()
         {
-            StreamWriter writer = File.CreateText(@"c:\newfile.txt"); 
+            StreamWriter writer = File.CreateText(@"d:\newfile.txt");
             writer.WriteLine("First string");
-            writer.WriteLine("Second string"); 
+            writer.WriteLine("Second string");
             writer.Close();
-            StreamReader reader = File.OpenText(@"c:\newfile.txt");
+            StreamReader reader = File.OpenText(@"d:\newfile.txt");
             string contents = reader.ReadToEnd();
             reader.Close();
             Console.WriteLine(contents);
